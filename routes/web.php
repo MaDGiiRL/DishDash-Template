@@ -17,3 +17,4 @@ Route::delete('/user/destroy', [PublicController::class, 'user_destroy'])->name(
 Route::get('/recipe/create', [RecipeController::class, 'create'])->name('recipe.create')->middleware('auth');
 Route::post('/recipe/store', [RecipeController::class, 'store'])->name('recipe.store')->middleware('auth');
 Route::get('/recipe/index', [RecipeController::class, 'index'])->name('recipe.index');
+Route::get('/recipe/show/{recipe}', [RecipeController::class, 'show'])->name('recipe.show')->middleware('auth');

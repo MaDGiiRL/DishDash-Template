@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Recipe;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,7 +23,8 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        return view('recipe.create');
+        $categories = Category::all();
+        return view('recipe.create', compact('categories'));
     }
 
     /**
@@ -30,11 +32,13 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
-        Auth::user()->recipes()->create([
+        $recipe = Auth::user()->recipes()->create([
             'title' => $request->title,
             'body' => $request->body,
             'img' => $request->has('img') ? $request->file('img')->store('images', 'public') : '/images/default.png',
         ]);
+
+        $recipe->categories()->sync($request->categories);
 
         return redirect(route('recipe.index'))->with('message', 'Recipe Posted.');
     }
@@ -44,7 +48,7 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe)
     {
-        //
+        return view('recipe.show', compact('recipe'));
     }
 
     /**
