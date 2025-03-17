@@ -8,13 +8,14 @@
 
             @foreach ($recipes as $recipe)
             <div class="col-4 my-3">
-                <div class="card  border position-relative">
-                    <div class="card-body">
+                <div class="card border position-relative">
+                    <div class="card-body p-0">
                         <img src="{{Storage::url($recipe->img)}}" class="card-img-top img-fluid">
                         <h5 class="text-start pt-3">{{$recipe->title}}</h5>
                         <div class="card-text text-start">
                             {!! Str::limit(strip_tags($recipe->body), 60, '...') !!}
                         </div>
+                        <div class=" d-flex flex-row align-items-center justify-content-between px-3">
                         <ul class="rating pt-3">
                             <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                             <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
@@ -22,6 +23,8 @@
                             <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                             <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                         </ul>
+                        <p class="small text-muted pt-4">Created by {{$recipe->user->name}} </p>
+                        </div>
                     </div>
                 </div>
             </div>

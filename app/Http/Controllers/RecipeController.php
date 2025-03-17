@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RecipeController extends Controller
 {
@@ -29,7 +30,7 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
-        Recipe::create([
+        Auth::user()->recipes()->create([
             'title' => $request->title,
             'body' => $request->body,
             'img' => $request->has('img') ? $request->file('img')->store('images', 'public') : '/images/default.png',

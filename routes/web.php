@@ -14,6 +14,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/my-account', [PublicController::class, 'account'])->name('account');
 Route::delete('/user/destroy', [PublicController::class, 'user_destroy'])->name('user.destroy');
 
-Route::get('/recipe/create', [RecipeController::class, 'create'])->name('recipe.create');
-Route::post('/recipe/store', [RecipeController::class, 'store'])->name('recipe.store');
+Route::get('/recipe/create', [RecipeController::class, 'create'])->name('recipe.create')->middleware('auth');
+Route::post('/recipe/store', [RecipeController::class, 'store'])->name('recipe.store')->middleware('auth');
 Route::get('/recipe/index', [RecipeController::class, 'index'])->name('recipe.index');
