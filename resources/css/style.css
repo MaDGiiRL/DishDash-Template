@@ -61,6 +61,16 @@ h6 {
     background-color: var(--red);
 }
 
+.btn-custom {
+    background-color: var(--red);
+    color: white;
+    transition: all 1s;
+}
+
+.btn-custom:hover {
+    color: white;
+    background-color: var(--orange);
+}
 
 /* Navbar */
 .navbar {
@@ -447,10 +457,10 @@ form .form-control::-webkit-input-placeholder {
 
 
 input.btn-black {
-	background-color: #000000;
-	color: #ffffff;
-	font-weight: bold;
-	height: 50px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    height: 50px;
 }
 
 .bg-banner {
@@ -465,3 +475,34 @@ input.btn-black {
     margin-bottom: 10px;
 }
 
+/* Account */
+
+.account-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-nav {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+#account-nav .active {
+    font-weight: bold;
+    color: var(--red) !important
+}

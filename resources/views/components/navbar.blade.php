@@ -82,7 +82,7 @@
                                     @endguest
 
                                     @auth
-                                    <li><a class="dropdown-item" href="">My Account</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('account') }}">My Account</a></li>
                                     <li><a class="dropdown-item" href="#">Wishlist</a></li>
                                     <li><a class="dropdown-item" href="#">Orders</a></li>
                                     <li>
@@ -126,7 +126,8 @@
                         <label for="login-password" class="form-label">Password</label>
                         <input type="password" id="login-password" name="password" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-outline-dark w-100">Accedi</button>
+                    <button type="submit" class="btn btn-custom w-100">Accedi</button>
+                    <p class="text-center mt-4 back-to-log">Forgot you password? <a href="{{ route('password.request') }}">Recover Password</a></p>
                 </form>
 
             </div>
@@ -157,7 +158,7 @@
                         <label for="register-password" class="form-label">Password</label>
                         <input type="password" id="register-password" name="password" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-outline-dark w-100">Registrati</button>
+                    <button type="submit" class="btn btn-custom w-100">Registrati</button>
                 </form>
             </div>
         </div>
