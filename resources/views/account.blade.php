@@ -5,18 +5,13 @@
                 <div class="col-md-3 account-nav">
                     <h4 class="fw-bold">Account</h4>
                     <nav id="account-nav" class="nav flex-column">
-                        <a class="nav-link active" href="#" data-target="new-recipe">New Recipe<i class="bi bi-arrow-right-short"></i></a>
-                        <a class="nav-link" href="#" data-target="your-recipe">Your Recipe<i class="bi bi-arrow-right-short"></i></a>
+                        <a class="nav-link active" href="#" data-target="your-recipe">Your Recipe<i class="bi bi-arrow-right-short"></i></a>
                         <a class="nav-link " href="#" data-target="contact-info">Contact information</a>
                         <a class="nav-link" href="#" data-target="change-password">Change password</a>
                     </nav>
                 </div>
                 <div class="col-md-9">
                     <div class="account-container">
-                        <section id="new-recipe" class="content-section">
-                            <h4 class="fw-bold text-dark pb-4">New Recipe</h4>
-                            <p>Manage your saved addresses here.</p>
-                        </section>
                         <section id="your-recipe" class="content-section">
                             <h4 class="fw-bold text-dark pb-4">Your Recipe</h4>
                             <p>View your order history here.</p>

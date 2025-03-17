@@ -13,7 +13,8 @@
                     </a>
 
                     <ul class="navbar-nav d-flex align-items-center">
-                        <li class="nav-item"><a class="nav-link" href="">HOMEPAGE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('homepage') }}">HOMEPAGE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('recipe.index') }}">RECIPES</a></li>
                         <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0 text-uppercase drop-custom">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -21,6 +22,9 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 470px;">
                                     <div class="row px-2 align-items-center text-center">
+                                        <div class="col-12">
+                                            <li><a class="dropdown-item" href="">All</a></li>
+                                        </div>
                                         <div class="col-3 text-center p-1">
                                             <li><a class="dropdown-item" href="">Fish</a></li>
                                             <li><a class="dropdown-item" href="">Seafood</a></li>
@@ -40,10 +44,10 @@
                                             <li><a class="dropdown-item" href="">IceCream</a></li>
                                         </div>
                                         <div class="col-3 text-center  p-1">
-                                            <li><a class="dropdown-item" href="">Salad</a></li>
                                             <li><a class="dropdown-item" href="">Vegan</a></li>
-                                            <li><a class="dropdown-item" href="">Oriental</a></li>
                                             <li><a class="dropdown-item" href="">Dips</a></li>
+                                            <li><a class="dropdown-item" href="">Drinks</a></li>
+                                            <li><a class="dropdown-item" href="">Oriental</a></li>
                                         </div>
                                     </div>
                                 </ul>
@@ -83,7 +87,7 @@
 
                                     @auth
                                     <li><a class="dropdown-item" href="{{ route('account') }}">My Account</a></li>
-                                    <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                                    <li><a class="dropdown-item" href="{{route('recipe.create')}}">New Recipe</a></li>
                                     <li><a class="dropdown-item" href="#">Orders</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
