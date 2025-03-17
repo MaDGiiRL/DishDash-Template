@@ -77,8 +77,8 @@
                                         @endauth
                                     </li>
                                     @guest
-                                    <li><a class="dropdown-item" href="">Login</a></li>
-                                    <li><a class="dropdown-item" href="">Register</a></li>
+                                    <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                                    <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
                                     @endguest
 
                                     @auth
@@ -102,5 +102,64 @@
                 </div>
             </div>
         </nav>
+    </div>
+</div>
+
+
+
+<!-- Modale Login -->
+<div class="modal fade mt-5" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('login') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="login-email" class="form-label">Email</label>
+                        <input type="email" id="login-email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label">Password</label>
+                        <input type="password" id="login-password" name="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark w-100">Accedi</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modale Registrazione -->
+<div class="modal fade" id="registerModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Registrati</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('register') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="register-name" class="form-label">Nome</label>
+                        <input type="text" id="register-name" name="name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-email" class="form-label">Email</label>
+                        <input type="email" id="register-email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-password" class="form-label">Password</label>
+                        <input type="password" id="register-password" name="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark w-100">Registrati</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

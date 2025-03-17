@@ -1,4 +1,5 @@
-<x-layout title="homepage">
+<x-layout title="Homepage - DishDash">
+
     <x-header />
 
     <!-- Super Delicius -->
@@ -12,12 +13,12 @@
                     <div class="card-body">
                         <img src="/images/super/spiniach.png" class="card-img-top img-fluid">
                         <h5 class="text-start pt-3">Spinach and Cheese Pasta</h5>
-                        <ul class="rating pt-3" data-mdb-rating-init="" tabindex="0" data-mdb-rating-initialized="true" style="outline: none;">
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                        <ul class="rating pt-3">
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -27,12 +28,12 @@
                     <div class="card-body">
                         <img src="/images/super/donut.png" class="card-img-top img-fluid">
                         <h5 class="text-start pt-3">Fancy Glazed Donuts</h5>
-                        <ul class="rating pt-3" data-mdb-rating-init="" tabindex="0" data-mdb-rating-initialized="true" style="outline: none;">
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                        <ul class="rating pt-3">
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -42,12 +43,12 @@
                     <div class="card-body">
                         <img src="/images/super/burger.png" class="card-img-top img-fluid">
                         <h5 class="text-start pt-3">Mighty Cheesy Breakfast Burger</h5>
-                        <ul class="rating pt-3" data-mdb-rating-init="" tabindex="0" data-mdb-rating-initialized="true" style="outline: none;">
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                        <ul class="rating pt-3">
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,12 +68,12 @@
                     <div class="card-body">
                         <img src="/images/sweet/mint.png" class="card-img-top img-fluid">
                         <h5 class="text-start pt-3">Chocolante and Mint Milkshake</h5>
-                        <ul class="rating pt-3" data-mdb-rating-init="" tabindex="0" data-mdb-rating-initialized="true" style="outline: none;">
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                        <ul class="rating pt-3">
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -82,12 +83,12 @@
                     <div class="card-body">
                         <img src="/images/sweet/banana.png" class="card-img-top img-fluid">
                         <h5 class="text-start pt-3">Banana Pudding Parfaits Jar Cake</h5>
-                        <ul class="rating pt-3" data-mdb-rating-init="" tabindex="0" data-mdb-rating-initialized="true" style="outline: none;">
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                        <ul class="rating pt-3">
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,12 +98,12 @@
                     <div class="card-body">
                         <img src="/images/sweet/cookies.png" class="card-img-top img-fluid">
                         <h5 class="text-start pt-3">Berry Maddness Biscuits</h5>
-                        <ul class="rating pt-3" data-mdb-rating-init="" tabindex="0" data-mdb-rating-initialized="true" style="outline: none;">
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                        <ul class="rating pt-3">
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                         </ul>
                     </div>
                 </div>
