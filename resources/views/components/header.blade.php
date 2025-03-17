@@ -4,7 +4,7 @@
         <div class="carousel-item active">
             <div class="container">
                 <div class="row align-items-center bg-custom-1">
-                    <div class="col-md-7  bg-white">
+                    <div class="col-md-7  bg-custom-white">
                         <img src="/images/cheesecake.png" class="img-fluid rounded carousel-img">
                     </div>
                     <div class="col-md-5 p-5 ">
@@ -21,7 +21,7 @@
         <div class="carousel-item">
             <div class="container">
                 <div class="row align-items-center bg-custom-3">
-                    <div class="col-md-7  bg-white">
+                    <div class="col-md-7  bg-custom-white">
                         <img src="/images/c-cake.png" class="img-fluid rounded carousel-img">
                     </div>
                     <div class="col-md-5 p-5">
@@ -38,7 +38,7 @@
         <div class="carousel-item">
             <div class="container">
                 <div class="row align-items-center bg-custom-4">
-                    <div class="col-md-7  bg-white">
+                    <div class="col-md-7  bg-custom-white">
                         <img src="/images/steak.png" class="img-fluid rounded carousel-img">
                     </div>
                     <div class="col-md-5 p-5">
@@ -55,7 +55,7 @@
         <div class="carousel-item">
             <div class="container">
                 <div class="row align-items-center bg-custom-2">
-                    <div class="col-md-7  bg-white">
+                    <div class="col-md-7  bg-custom-white">
                         <img src="/images/rice.png" class="img-fluid rounded carousel-img">
                     </div>
                     <div class="col-md-5 p-5">

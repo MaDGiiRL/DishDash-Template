@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\AccountController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
@@ -20,3 +21,7 @@ Route::get('/recipe/show/{recipe}', [RecipeController::class, 'show'])->name('re
 Route::get('/recipe/edit/{recipe}', [RecipeController::class, 'edit'])->name('recipe.edit')->middleware('auth');
 Route::put('/recipe/update/{recipe}', [RecipeController::class, 'update'])->name('recipe.update')->middleware('auth');
 Route::delete('/recipe/destroy/{recipe}', [RecipeController::class, 'destroy'])->name('recipe.destroy')->middleware('auth');
+
+Route::get('/account/edit', [AccountController::class, 'edit'])->name('account.edit')->middleware('auth');
+
+Route::put('/account/update', [AccountController::class, 'update'])->name('account.update')->middleware('auth');

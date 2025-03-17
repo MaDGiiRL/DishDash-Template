@@ -163,7 +163,7 @@
                                 <div class="col-md-12 pb-5">
                                     <div class="subscribe">
                                         <input type="email" placeholder="Email">
-                                        <button class="btn btn-outline-dark w-100 mt-3">Subscribe →</button>
+                                        <button class="btn btn-custom w-100 mt-3">Subscribe →</button>
                                     </div>
                                 </div>
                             </div>

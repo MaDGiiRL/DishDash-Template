@@ -1,7 +1,8 @@
 <x-layout title="Write a Recipe - DishDash">
+
     <div class="container pt-5 mt-5">
         <div class="row justify-content-center py-5 mb-5">
-            <div class="col-9 shadow border rounded p-5">
+            <div class="col-9 bg-white shadow border rounded p-5">
                 <h2 class="fw-bold pb-5 text-center">Write your new Recipe.</h2>
                 <form method="POST" action="{{route('recipe.store')}}" enctype="multipart/form-data">
                     @csrf

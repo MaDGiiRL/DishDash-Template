@@ -13,7 +13,7 @@
                         <div class="card-text text-start">
                             {!! $recipe->body !!}
                         </div>
-                        <div class=" d-flex flex-row align-items-center justify-content-between px-3">
+                        <div class=" d-flex flex-row align-items-center justify-content-around px-3">
                             <ul class="rating pt-3">
                                 <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                                 <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
@@ -31,15 +31,16 @@
                         </div>
 
                         <div>
-                            @if (Auth::user()->id === $recipe->user->id)
+                            @if (Auth::check() && Auth::user()->id == $recipe->user->id)
                             <a href="{{route('recipe.edit' , compact('recipe'))}}">Edit Recipe</a>
-                            @endif
+
 
                             <form action="{{route('recipe.destroy' , compact('recipe'))}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
+                            @endif
                         </div>
                     </div>
                 </div>

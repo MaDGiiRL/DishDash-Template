@@ -1,4 +1,39 @@
 <x-layout title="Recipes - DishDash">
+    <!-- categories -->
+    <div class="container categories my-5">
+        <div class="row justify-content-around align-items-center">
+            <div class="col-12 mb-5">
+                <h2>Popular Categories</h2>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2 text-center">
+                <img src="/images/popular-cat/pasta.png" alt="pasta" class="img-fluid rounded-circle p-2 mb-3">
+                <h4>Pasta</h4>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2 text-center">
+                <img src="/images/popular-cat/pizza.png" alt="pizza" class="img-fluid rounded-circle p-2 mb-3">
+                <h4>Pizza</h4>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2 text-center">
+                <img src="/images/popular-cat/green.png" alt="vegan" class="img-fluid rounded-circle p-2 mb-3">
+                <h4>Vegan</h4>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2 text-center">
+                <img src="/images/popular-cat/cake.png" alt="desserts" class="img-fluid rounded-circle p-2 mb-3">
+                <h4>Desserts</h4>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2 text-center">
+                <img src="/images/popular-cat/smoothie.png" alt="smoothie" class="img-fluid rounded-circle p-2 mb-3">
+                <h4>Smoothie</h4>
+            </div>
+            <div class="col-6 col-md-2 col-lg-2 text-center">
+                <img src="/images/popular-cat/toast.png" alt="breakfast" class="img-fluid rounded-circle p-2 mb-3">
+                <h4>Breakfast</h4>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Super Delicius -->
     <div class="container my-5 pt-5">
         <div class="row pt-1">

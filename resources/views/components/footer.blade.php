@@ -1,3 +1,65 @@
+<div class="follow-us-instagram">
+    <div class="container">
+        <div class="row">
+            <div class="col-12
+             pt-5 pb-2">
+                <h5>Follow Us Instragram</h5>
+            </div>
+        </div>
+    </div>
+    <div class="insta-feeds d-flex flex-wrap">
+        <div class="single-insta-feeds">
+            <img src="/images/insta1.jpg" alt="">
+            <div class="insta-icon">
+                <a href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="single-insta-feeds">
+            <img src="/images/insta2.jpg" alt="">
+            <div class="insta-icon">
+                <a href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="single-insta-feeds">
+            <img src="/images/insta3.jpg" alt="">
+            <div class="insta-icon">
+                <a href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="single-insta-feeds">
+            <img src="/images/insta4.jpg" alt="">
+            <div class="insta-icon">
+                <a href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="single-insta-feeds">
+            <img src="/images/insta5.jpg" alt="">
+            <div class="insta-icon">
+                <a href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="single-insta-feeds">
+            <img src="/images/insta6.jpg" alt="">
+            <div class="insta-icon">
+                <a href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="single-insta-feeds">
+            <img src="/images/insta7.jpg" alt="">
+            <div class="insta-icon d-flex justify-content-center flex-row">
+                <a href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @unless(request()->routeIs('recipe.show'))
 <footer>
     <div class="container">
