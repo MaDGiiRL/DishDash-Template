@@ -56,7 +56,8 @@ class RecipeController extends Controller
      */
     public function edit(Recipe $recipe)
     {
-        //
+        $categories = Category::all();
+        return view('recipe.edit', compact('recipe', 'categories'));
     }
 
     /**
@@ -64,7 +65,13 @@ class RecipeController extends Controller
      */
     public function update(Request $request, Recipe $recipe)
     {
-        //
+        $recipe->update([
+            'title' => $request->title,
+            'body' => $request->body,
+            'img' => $request->has('img') ? $request->file('img')->store('images', 'public') : $recipe->img,
+        ]);
+
+        $recipe->categories()->sync($request->categories);;
     }
 
     /**
@@ -72,6 +79,10 @@ class RecipeController extends Controller
      */
     public function destroy(Recipe $recipe)
     {
-        //
+        $recipe->categories()->detach();
+        $recipe->user()->dissociate();
+        $recipe->delete();
+
+        return redirect(route('recipe.index'))->with('message', ' Recipe Deleted with Success!');
     }
 }

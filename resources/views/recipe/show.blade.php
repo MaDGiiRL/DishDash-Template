@@ -1,6 +1,6 @@
 <x-layout title="{{$recipe->title}} - DishDash">
     <!-- Super Delicius -->
-    <div class="container my-5 pt-5">
+    <div class="container mb-5 pb-5">
         <div class="row pt-1">
             <div class="col-12 mb-3">
                 <h2>Super Delicius</h2>
@@ -29,10 +29,21 @@
                                 @endforeach
                             </ul>
                         </div>
+
+                        <div>
+                            @if (Auth::user()->id === $recipe->user->id)
+                            <a href="{{route('recipe.edit' , compact('recipe'))}}">Edit Recipe</a>
+                            @endif
+
+                            <form action="{{route('recipe.destroy' , compact('recipe'))}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </x-layout>

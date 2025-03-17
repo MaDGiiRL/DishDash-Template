@@ -37,6 +37,7 @@
 
     <x-footer />
 
+
     <!-- footer componenet -->
     <script src="/js/main.js"></script>
 </body>
