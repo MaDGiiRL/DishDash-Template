@@ -6,7 +6,7 @@
     --lino: #e3f1ff;
     --gray: #7f7f7f;
     --light-g: #e8e8e8;
-    --c-white: #f9f9f9;
+    --c-white: #f9f9f9d3;
     --color-text: #383838;
     --font-title: "Playfair Display";
     --font-body: "Poppins";
@@ -30,20 +30,22 @@ h6 {
 }
 
 
-.bg-custom-1{
+.bg-custom-1 {
     background-color: rgba(255, 215, 201, 0.541);
 }
-.bg-custom-2{
+
+.bg-custom-2 {
     background-color: rgba(235, 192, 255, 0.548)
 }
 
-.bg-custom-3{
+.bg-custom-3 {
     background-color: rgb(227, 241, 255);
 }
 
-.bg-custom-4{
+.bg-custom-4 {
     background-color: rgb(227, 255, 234);
 }
+
 
 .link-color {
     color: var(--red);
@@ -368,6 +370,7 @@ footer .social-icons a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--c-white);
 }
 
 .card-img-top {
@@ -381,3 +384,84 @@ footer .social-icons a {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+
+/* Banner */
+.box {
+    margin: auto;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 66px;
+}
+
+.sub-heading {
+    padding: 8px 0 8px 0;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+textarea[name="message"] {
+    resize: none;
+}
+
+#e-mail {
+    height: 45px;
+}
+
+#message {
+    height: 120px;
+}
+
+input.input-box,
+textarea.input-box {
+    background-color: var(--light-o);
+    border: var(--orange);
+    color: var(--color-text);
+    font-size: 15px;
+    padding: 15px auto 15px auto !important;
+    height: 50px !important;
+}
+
+input.input-box:focus,
+textarea.input-box:focus {
+    background-color: var(--orange);
+    color: #ffffff;
+}
+
+.rm-border:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+form .form-control::-webkit-input-placeholder {
+    color: #6e6e6e;
+}
+
+::-moz-placeholder {
+    color: #6e6e6e !important;
+}
+
+
+input.btn-black {
+	background-color: #000000;
+	color: #ffffff;
+	font-weight: bold;
+	height: 50px;
+}
+
+.bg-banner {
+    background-color: var(--opacity-light-o);
+}
+
+.subscribe input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
