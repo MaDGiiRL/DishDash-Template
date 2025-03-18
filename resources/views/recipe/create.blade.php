@@ -1,5 +1,10 @@
 <x-layout title="Write a Recipe - DishDash">
-    <div class="container pt-5 mt-5">
+    <style>
+        body {
+            background-color:rgba(253, 93, 104, 0.75);
+        }
+    </style>
+    <div class="container">
         <div class="row justify-content-center py-5 mb-5">
             <div class="col-9 bg-white shadow border rounded p-5">
                 <h2 class="fw-bold pb-5 text-center">Write your new Recipe.</h2>
@@ -90,7 +95,7 @@
 </x-layout>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        let ingredientIndex = 1; 
+        let ingredientIndex = 1;
 
         document.getElementById("add-ingredient").addEventListener("click", function() {
             const ingredientList = document.getElementById("ingredients-list");
@@ -116,7 +121,7 @@
             `;
 
             ingredientList.appendChild(ingredientItem);
-            ingredientIndex++; 
+            ingredientIndex++;
 
 
             ingredientItem.querySelector(".remove-ingredient").addEventListener("click", function() {

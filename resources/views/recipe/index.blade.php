@@ -2,42 +2,25 @@
     <!-- categories -->
     <div class="container categories my-5">
         <div class="row justify-content-around align-items-center">
-            <div class="col-12 mb-5 pt-5">
-                <h2>Popular Categories</h2>
+            <div class="col-12 mb-5">
+                <h2>Popular Categories</h2> 
+                <a href="{{route('categories')}}">View All <i class="bi bi-arrow-right-circle"></i></a>
             </div>
+            @foreach ($categories->take(6) as $category)
             <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/pasta.png" alt="pasta" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Pasta</h4>
+                <a href="{{ route('category.recipes', ['category' => $category->id]) }}">
+                    <img src="/images/popular-cat/{{ strtolower($category->name) }}.png" alt="{{ $category->name }}" class="img-fluid rounded-circle p-2 mb-3">
+                    <h4>{{ $category->name }}</h4>
+                </a>
             </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/pizza.png" alt="pizza" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Pizza</h4>
-            </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/green.png" alt="vegan" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Vegan</h4>
-            </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/cake.png" alt="desserts" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Desserts</h4>
-            </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/smoothie.png" alt="smoothie" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Smoothie</h4>
-            </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/toast.png" alt="breakfast" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Breakfast</h4>
-            </div>
+            @endforeach
         </div>
     </div>
 
-
-    <!-- Super Delicius -->
     <div class="container my-5 pt-5 index">
         <div class="row pt-1">
             <div class="col-12 mb-3">
-                <h2>Super Delicius</h2>
+                <h2>Recipes from the Community</h2>
             </div>
 
             @foreach ($recipes as $recipe)

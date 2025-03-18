@@ -116,6 +116,7 @@
         <div class="row justify-content-around align-items-center">
             <div class="col-12 mb-5">
                 <h2>Popular Categories</h2>
+                <a href="{{route('categories')}}">View All <i class="bi bi-arrow-right-circle"></i></a>
             </div>
             @foreach ($categories as $category)
             <div class="col-6 col-md-2 col-lg-2 text-center">

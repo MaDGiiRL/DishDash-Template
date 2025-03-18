@@ -67,7 +67,8 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe)
     {
-        return view('recipe.show', compact('recipe'));
+        $categories = Category::take(6)->get();
+        return view('recipe.show', compact('recipe', 'categories'));
     }
 
     /**

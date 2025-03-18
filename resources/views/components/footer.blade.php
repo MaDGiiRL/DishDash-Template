@@ -1,12 +1,4 @@
 <div class="follow-us-instagram">
-    <div class="container">
-        <div class="row">
-            <div class="col-12
-             pt-5 pb-2">
-                <h5>Follow Us Instragram</h5>
-            </div>
-        </div>
-    </div>
     <div class="insta-feeds d-flex flex-wrap">
         <div class="single-insta-feeds">
             <img src="/images/insta1.jpg" alt="">
