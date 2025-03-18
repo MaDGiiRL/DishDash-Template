@@ -16,5 +16,4 @@ class PublicController extends Controller
 
         return view('account');
     }
-    
 }

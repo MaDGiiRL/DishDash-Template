@@ -36,13 +36,13 @@
                                     <i class="bi bi-person fs-3"></i><br>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    @auth
                                     <li class="dropdown-item">
-                                        @auth
+
                                         Hi, {{ Auth::user()->name }}
-                                        @else
-                                        Account
-                                        @endauth
+
                                     </li>
+                                    @endauth
                                     @guest
                                     <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
                                     <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>

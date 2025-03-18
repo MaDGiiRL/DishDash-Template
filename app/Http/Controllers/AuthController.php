@@ -52,5 +52,4 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('/')->with('message', 'Logout success!');
     }
-
 }

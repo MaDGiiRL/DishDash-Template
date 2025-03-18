@@ -59,5 +59,10 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::verifyEmailView(function () {
             return view('auth.verify-email');
         });
+
+        Fortify::loginView(function () {
+            // Puoi restituire una view che include la tua modale, oppure una view minimale
+            return view('auth.login'); // Assicurati di avere questa view in resources/views/auth/login.blade.php
+        });
     }
 }

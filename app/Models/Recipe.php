@@ -8,13 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recipe extends Model
 {
-    protected $fillable = ['title', 'body', 'img', 'user_id'];
+    protected $fillable = ['title', 'body', 'img', 'user_id', 'ingredients', 'servings', 'prep_time', 'cook_time'];
+    protected $casts = [
+        'ingredients' => 'array',
+    ];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function categories(){
+    public function categories()
+    {
         return $this->belongsToMany(Category::class);
     }
 }

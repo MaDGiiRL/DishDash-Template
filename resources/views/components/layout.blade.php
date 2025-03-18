@@ -17,12 +17,12 @@
 
     <!-- CSS Custom -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    @livewireStyles
 </head>
 
 <body>
     <x-back />
-    <!-- navbar componenet -->
+   
     <x-navbar />
     @if (session('message'))
     <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
@@ -31,15 +31,15 @@
     </div>
     @endif
 
-    <!-- views -->
+   
     <div class="min-vh-100">
         {{$slot}}
     </div>
 
     <x-footer />
 
-
-    <!-- footer componenet -->
+    @livewireScripts
+    
     <script src="/js/main.js"></script>
 </body>
 

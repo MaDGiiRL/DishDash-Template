@@ -32,13 +32,32 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->validate([
+            'title' => 'required|string|max:255',
+            'body'  => 'required',
+            'ingredients' => 'required|array',
+            'ingredients.*.name' => 'required|string|max:255',
+            'ingredients.*.quantity' => 'required|numeric',
+            'ingredients.*.unit' => 'required|string|max:50',
+            'categories' => 'required|array',
+            'img' => 'nullable|image',
+            'prep_hours' => 'nullable|integer|min:0',
+            'prep_minutes' => 'nullable|integer|min:0|max:59',
+            'cook_hours' => 'nullable|integer|min:0',
+            'cook_minutes' => 'nullable|integer|min:0|max:59',
+        ]);
+
         $recipe = Auth::user()->recipes()->create([
             'title' => $request->title,
             'body' => $request->body,
             'img' => $request->has('img') ? $request->file('img')->store('images', 'public') : '/images/default.png',
+            'ingredients' => $data['ingredients'],
+            'prep_time' => ($request->prep_hours * 60) + $request->prep_minutes, 
+            'cook_time' => ($request->cook_hours * 60) + $request->cook_minutes,
+            'servings' => $request->input('servings', 4),
         ]);
 
-        $recipe->categories()->sync($request->categories);
+        $recipe->categories()->sync($data['categories']);
 
         return redirect(route('recipe.index'))->with('message', 'Recipe Posted.');
     }
@@ -65,13 +84,41 @@ class RecipeController extends Controller
      */
     public function update(Request $request, Recipe $recipe)
     {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'body' => 'required|string',
+            'ingredients' => 'required|array',
+            'ingredients.*.name' => 'required|string',
+            'ingredients.*.quantity' => 'required|numeric',
+            'ingredients.*.unit' => 'required|string',
+            'cooking_time_hours' => 'nullable|integer|min:0',
+            'cooking_time_minutes' => 'nullable|integer|min:0|max:59',
+            'preparation_time_hours' => 'nullable|integer|min:0',
+            'preparation_time_minutes' => 'nullable|integer|min:0|max:59',
+            'categories' => 'nullable|array',
+            'categories.*' => 'exists:categories,id',
+            'img' => 'nullable|image|max:2048',
+        ]);
+
         $recipe->update([
             'title' => $request->title,
             'body' => $request->body,
-            'img' => $request->has('img') ? $request->file('img')->store('images', 'public') : $recipe->img,
+            'ingredients' => json_encode($request->ingredients),
+            'cooking_time' => ($request->cooking_time_hours * 60) + $request->cooking_time_minutes,
+            'preparation_time' => ($request->preparation_time_hours * 60) + $request->preparation_time_minutes,
         ]);
 
-        $recipe->categories()->sync($request->categories);;
+
+        if ($request->has('categories')) {
+            $recipe->categories()->sync($request->categories);
+        }
+
+        if ($request->hasFile('img')) {
+            $path = $request->file('img')->store('public/recipes');
+            $recipe->update(['img' => $path]);
+        }
+
+        return redirect()->route('recipe.show', compact('recipe'))->with('success', 'Recipe updated successfully!');
     }
 
     /**
@@ -84,5 +131,11 @@ class RecipeController extends Controller
         $recipe->delete();
 
         return redirect(route('recipe.index'))->with('message', ' Recipe Deleted with Success!');
+    }
+
+    public function recipesByCategory(Category $category)
+    {
+        $recipes = $category->recipes;
+        return view('recipe.category', compact('recipes', 'category'));
     }
 }
