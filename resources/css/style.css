@@ -462,20 +462,20 @@ footer .social-icons a {
 .spikes {
     position: relative;
     background: #ffd7c9;
-    height: 40vh;
+    height: 45vh;
 }
 
 .spikes::after {
     content: '';
     position: absolute;
     right: 0;
-    left: -53%;
+    left: 0%;
     top: 100%;
     z-index: 10;
     display: block;
     height: 60px;
     background-size: 60px 100%;
-    background-image: linear-gradient(135deg, #ffd7c9 25%, transparent 25%), linear-gradient(225deg, #ffd7c9 25%, transparent 25%);
+    background-image: linear-gradient(135deg, var(--spike-color) 25%, transparent 25%), linear-gradient(225deg, var(--spike-color) 25%, transparent 25%);
     background-position: 0 0;
 }
 
@@ -592,4 +592,60 @@ input.btn-black {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
     }
+}
+
+/* Show Recipe */
+.recipe {
+    position: relative;
+    background: #ffd7c9;
+    height: 45vh;
+}
+
+.recipe::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0%;
+    top: 100%;
+    z-index: -2;
+    display: block;
+    height: 60px;
+    background-size: 60px 100%;
+    background-image: linear-gradient(135deg, #ffd7c9 25%, transparent 25%), linear-gradient(225deg, #ffd7c9 25%, transparent 25%);
+    background-position: 0 0;
+}
+
+
+.recipe-show h2,
+.recipe-show h3,
+.recipe-show h4,
+.recipe-show h5 {
+    text-transform: uppercase;
+    color: var(--red)
+}
+
+.recipe-show h1 {
+    text-transform: uppercase;
+    color: black
+}
+
+.recipe-show ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recipe-show ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recipe-show ul li i {
+    margin-right: 10px;
+}
+
+.recipe-badge{
+    background-color: var(--red);
+    color: white;
+    text-decoration:none;
 }

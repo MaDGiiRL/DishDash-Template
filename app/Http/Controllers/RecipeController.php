@@ -52,7 +52,7 @@ class RecipeController extends Controller
             'body' => $request->body,
             'img' => $request->has('img') ? $request->file('img')->store('images', 'public') : '/images/default.png',
             'ingredients' => $data['ingredients'],
-            'prep_time' => ($request->prep_hours * 60) + $request->prep_minutes, 
+            'prep_time' => ($request->prep_hours * 60) + $request->prep_minutes,
             'cook_time' => ($request->cook_hours * 60) + $request->cook_minutes,
             'servings' => $request->input('servings', 4),
         ]);

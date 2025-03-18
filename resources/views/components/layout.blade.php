@@ -22,7 +22,7 @@
 
 <body>
     <x-back />
-   
+
     <x-navbar />
     @if (session('message'))
     <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
@@ -31,7 +31,7 @@
     </div>
     @endif
 
-   
+
     <div class="min-vh-100">
         {{$slot}}
     </div>
@@ -39,8 +39,31 @@
     <x-footer />
 
     @livewireScripts
-    
+
     <script src="/js/main.js"></script>
+    <script>
+        function getRandomPastelColor() {
+            let hue = Math.floor(Math.random() * 360);
+            return `hsl(${hue}, 80%, 85%)`;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let spikeColor = getRandomPastelColor();
+            let spikeElement = document.querySelector(".spikes");
+
+            spikeElement.style.background = spikeColor;
+
+            let afterStyle = `linear-gradient(135deg, ${spikeColor} 25%, transparent 25%), linear-gradient(225deg, ${spikeColor} 25%, transparent 25%)`;
+            spikeElement.style.setProperty('--spike-color', spikeColor);
+
+            let styleSheet = document.styleSheets[0];
+            styleSheet.insertRule(`
+            .spikes::after {
+                background-image: ${afterStyle};
+            }
+        `, styleSheet.cssRules.length);
+        });
+    </script>
 </body>
 
 </html>
