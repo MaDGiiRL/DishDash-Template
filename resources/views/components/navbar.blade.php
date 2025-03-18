@@ -15,7 +15,7 @@
                     <ul class="navbar-nav d-flex align-items-center">
                         <li class="nav-item"><a class="nav-link" href="{{ route('homepage') }}">HOMEPAGE</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('recipe.index') }}">RECIPES</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">CATEGORIES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('categories')}}">CATEGORIES</a></li>
                         <li class="nav-item"><a class="nav-link" href="">ABOUT</a></li>
                         <a class="nav-link" href="">BLOG</a>
                         <li class="nav-item"><a class="nav-link" href="">CONTACT</a></li>

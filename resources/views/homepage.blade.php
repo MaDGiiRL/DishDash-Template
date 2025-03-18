@@ -117,30 +117,14 @@
             <div class="col-12 mb-5">
                 <h2>Popular Categories</h2>
             </div>
+            @foreach ($categories as $category)
             <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/pasta.png" alt="pasta" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Pasta</h4>
+                <a href="{{ route('category.recipes', ['category' => $category->id]) }}">
+                    <img src="/images/popular-cat/{{ strtolower($category->name) }}.png" alt="{{ $category->name }}" class="img-fluid rounded-circle p-2 mb-3">
+                    <h4>{{ $category->name }}</h4>
+                </a>
             </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/pizza.png" alt="pizza" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Pizza</h4>
-            </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/green.png" alt="vegan" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Vegan</h4>
-            </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/cake.png" alt="desserts" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Desserts</h4>
-            </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/smoothie.png" alt="smoothie" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Smoothie</h4>
-            </div>
-            <div class="col-6 col-md-2 col-lg-2 text-center">
-                <img src="/images/popular-cat/toast.png" alt="breakfast" class="img-fluid rounded-circle p-2 mb-3">
-                <h4>Breakfast</h4>
-            </div>
+            @endforeach
         </div>
     </div>
 

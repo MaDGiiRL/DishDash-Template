@@ -8,6 +8,8 @@ use App\Http\Controllers\AccountController;
 use App\Http\Livewire\IngredientCalculator;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+Route::get('/categories', [PublicController::class, 'categories'])->name('categories');
+
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/login', [AuthController::class, 'login'])->name('login');

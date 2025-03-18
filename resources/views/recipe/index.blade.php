@@ -1,5 +1,4 @@
 <x-layout title="Recipes - DishDash">
-
     <!-- categories -->
     <div class="container categories my-5">
         <div class="row justify-content-around align-items-center">
@@ -35,7 +34,7 @@
 
 
     <!-- Super Delicius -->
-    <div class="container my-5 pt-5">
+    <div class="container my-5 pt-5 index">
         <div class="row pt-1">
             <div class="col-12 mb-3">
                 <h2>Super Delicius</h2>
@@ -45,22 +44,24 @@
             <div class="col-4 my-3">
                 <div class="card border position-relative">
                     <div class="card-body p-0">
-                        <a href="{{route('recipe.show' , compact('recipe'))}}">
-                            <img src="{{Storage::url($recipe->img)}}" class="card-img-top img-fluid">
+                        <a href="{{route('recipe.show', compact('recipe'))}}">
+                            <div class="image-container position-relative">
+                                <img src="{{Storage::url($recipe->img)}}" class="card-img-top img-fluid">
+                                <div class="recipe-icon">
+                                    <h5 class="link-light">Go to the Recipe <i class="bi bi-arrow-right-circle"></i></h5>
+                                </div>
+                            </div>
                             <h5 class="text-start pt-3">{{$recipe->title}}</h5>
                         </a>
-                        <div class="card-text text-start">
-                            {!! Str::limit(strip_tags($recipe->body), 60, '...') !!}
-                        </div>
-                        <div class=" d-flex flex-row align-items-center justify-content-between px-3">
-                            <ul class="rating pt-3">
+                        <div class="d-flex flex-row align-items-center justify-content-between px-3">
+                            <ul class="rating">
                                 <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                                 <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                                 <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                                 <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                                 <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
                             </ul>
-                            <p class="small text-muted pt-4">Created by {{$recipe->user->name}} </p>
+                            <p class="small text-muted pt-3">Created by {{$recipe->user->name}} </p>
                         </div>
                     </div>
                 </div>
