@@ -144,37 +144,35 @@
         </div>
     </div>
 
-
-    <!-- banner -->
-    <div class="container-fluid my-5 bg-banner shadow">
-        <div class="row justify justify-content-center">
-            <div class="col-12 col-lg-9 col-xl-8">
-                <form class="px-5">
-                    <div class="form-banner p-2">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 col-11">
-                                <div class="row mt-0">
-                                    <div class="col-md-12 pt-5">
-                                        <h4 class="text-center heading">Deliciousness to you inbox</h4>
-                                        <p class="text-center sub-heading">Enjoy weekly hand picked recipes and recommendations</p>
+    <section class="spikes">
+        <div class="container-fluid my-5">
+            <div class="row justify justify-content-center">
+                <div class="col-12 col-lg-9 col-xl-8">
+                    <form class="px-5">
+                        <div class="form-banner p-2">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-11">
+                                    <div class="row mt-0">
+                                        <div class="col-md-12 pt-5">
+                                            <h4 class="text-center heading">Deliciousness to you inbox</h4>
+                                            <p class="text-center sub-heading">Enjoy weekly hand picked recipes and recommendations</p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-12 pb-5">
-                                    <div class="subscribe">
-                                        <input type="email" placeholder="Email">
-                                        <button class="btn btn-custom w-100 mt-3">Subscribe →</button>
+                                    <div class="col-md-12 pb-5">
+                                        <div class="subscribe">
+                                            <input type="email" placeholder="Email">
+                                            <button class="btn btn-custom w-100 mt-3">Subscribe →</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-
         </div>
-    </div>
-
+    </section>
 
     <!-- Hand Picked Collection -->
     <div class="container my-5 pt-5 pb-5">
@@ -515,4 +513,3 @@
     </div>
 
 </x-layout>
-

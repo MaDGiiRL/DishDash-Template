@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <x-back />
     <!-- navbar componenet -->
     <x-navbar />
     @if (session('message'))

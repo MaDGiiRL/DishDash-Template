@@ -1,4 +1,4 @@
-<div class="container-fluid mb-5">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <nav class="navbar navbar-expand-lg navbar-light" data-aos="fade-down"
             data-aos-easing="linear"
