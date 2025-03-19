@@ -40,10 +40,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-7">
+                        <div class="col-md-8">
                             <livewire:counter :originalServings="$recipe->servings" :ingredients="$recipe->ingredients" />
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="row text-center">
                                 <div class="col-12 pt-3">
                                     <h5>Preparation Time:</h5>

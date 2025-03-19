@@ -3,113 +3,39 @@
     <x-header />
 
     <!-- Super Delicius -->
-    <div class="container my-5 pt-5">
+    <div class="container my-5 pt-5 index">
         <div class="row pt-1">
             <div class="col-12 mb-3">
                 <h2>Super Delicius</h2>
             </div>
+            @foreach ($recipes as $recipe)
             <div class="col-4">
-                <div class="card  border position-relative">
+                <div class="card border position-relative">
                     <div class="card-body">
-                        <img src="/images/super/spiniach.png" class="card-img-top img-fluid">
-                        <h5 class="text-start pt-3">Spinach and Cheese Pasta</h5>
+                        <a href="{{route('recipe.show', compact('recipe'))}}">
+                            <div class="image-container position-relative">
+                                <img src="{{Storage::url($recipe->img)}}" class="card-img-top img-fluid">
+                                <div class="recipe-icon">
+                                    <h5 class="link-light">Go to the Recipe <i class="bi bi-arrow-right-circle"></i></h5>
+                                </div>
+                            </div>
+                            <h5 class="text-start pt-3 p-3">{{$recipe->title}}</h5>
+                        </a>
                         <ul class="rating pt-3">
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
+                            @for ($i = 0; $i < 5; $i++)
+                                <li><a href="#" class="link-red">
+                                    <i class="bi bi-suit-heart-fill fa-sm fas active"></i>
+                                </a></li>
+                                @endfor
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="card  border position-relative">
-                    <div class="card-body">
-                        <img src="/images/super/donut.png" class="card-img-top img-fluid">
-                        <h5 class="text-start pt-3">Fancy Glazed Donuts</h5>
-                        <ul class="rating pt-3">
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card  border position-relative">
-                    <div class="card-body">
-                        <img src="/images/super/burger.png" class="card-img-top img-fluid">
-                        <h5 class="text-start pt-3">Mighty Cheesy Breakfast Burger</h5>
-                        <ul class="rating pt-3">
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
 
-    <!-- Sweet Tooth -->
-    <div class="container my-5 pt-5 pb-5">
-        <div class="row pt-1">
-            <div class="col-12 mb-3">
-                <h2>Sweet Tooth</h2>
-            </div>
-            <div class="col-4">
-                <div class="card  border position-relative">
-                    <div class="card-body">
-                        <img src="/images/sweet/mint.png" class="card-img-top img-fluid">
-                        <h5 class="text-start pt-3">Chocolante and Mint Milkshake</h5>
-                        <ul class="rating pt-3">
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card  border position-relative">
-                    <div class="card-body">
-                        <img src="/images/sweet/banana.png" class="card-img-top img-fluid">
-                        <h5 class="text-start pt-3">Banana Pudding Parfaits Jar Cake</h5>
-                        <ul class="rating pt-3">
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card  border position-relative">
-                    <div class="card-body">
-                        <img src="/images/sweet/cookies.png" class="card-img-top img-fluid">
-                        <h5 class="text-start pt-3">Berry Maddness Biscuits</h5>
-                        <ul class="rating pt-3">
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                            <li><a href="#" class="link-red"><i class="bi bi-suit-heart-fill fa-sm fas active"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- categories -->
     <div class="container categories my-5">

@@ -34,7 +34,7 @@
                                     <h5 class="link-light">Go to the Recipe <i class="bi bi-arrow-right-circle"></i></h5>
                                 </div>
                             </div>
-                            <h5 class="text-start pt-3">{{$recipe->title}}</h5>
+                            <h5 class="text-start pt-3 p-3">{{$recipe->title}}</h5>
                         </a>
                         <div class="d-flex flex-row align-items-center justify-content-between px-3">
                             <ul class="rating">
