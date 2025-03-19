@@ -4,7 +4,7 @@
         <div class="carousel-item active">
             <div class="container">
                 <div class="row align-items-center bg-custom-1">
-                    <div class="col-md-7  bg-custom-white">
+                    <div class="col-md-7">
                         <img src="/images/cheesecake.png" class="img-fluid rounded carousel-img">
                     </div>
                     <div class="col-md-5 p-5 ">
@@ -21,7 +21,7 @@
         <div class="carousel-item">
             <div class="container">
                 <div class="row align-items-center bg-custom-3">
-                    <div class="col-md-7  bg-custom-white">
+                    <div class="col-md-7">
                         <img src="/images/c-cake.png" class="img-fluid rounded carousel-img">
                     </div>
                     <div class="col-md-5 p-5">
@@ -38,7 +38,7 @@
         <div class="carousel-item">
             <div class="container">
                 <div class="row align-items-center bg-custom-4">
-                    <div class="col-md-7  bg-custom-white">
+                    <div class="col-md-7">
                         <img src="/images/steak.png" class="img-fluid rounded carousel-img">
                     </div>
                     <div class="col-md-5 p-5">
@@ -55,7 +55,7 @@
         <div class="carousel-item">
             <div class="container">
                 <div class="row align-items-center bg-custom-2">
-                    <div class="col-md-7  bg-custom-white">
+                    <div class="col-md-7">
                         <img src="/images/rice.png" class="img-fluid rounded carousel-img">
                     </div>
                     <div class="col-md-5 p-5">
@@ -67,13 +67,15 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+    
     <!-- Pulsanti di navigazione -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"><i class="bi bi-caret-left link-color fs-1"></i></span>
         <span class="visually-hidden">Previous</span>
     </button>
+
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"><i class="bi bi-caret-right link-color fs-1"></i></span>
         <span class="visually-hidden">Next</span>
